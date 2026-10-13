@@ -1,0 +1,301 @@
+hospital_id,district,hospital_type,nabh_level,is_metro,is_aspirational,has_pg_dnb,incentive_multiplier,size_weight,specialties
+H001,District_019,public,entry,1,0,0,1.21,0.3584,General Medicine|Obstetrics|General Surgery|Nephrology
+H002,District_034,private,none,0,0,0,1.0,1.7701,General Medicine|Urology|General Surgery|Ophthalmology|Orthopaedics|Oncology|Cardiology
+H003,District_029,private,none,0,1,0,1.1,1.2133,General Medicine|Obstetrics|Ophthalmology
+H004,District_014,private,none,0,1,0,1.1,0.6119,General Medicine
+H005,District_034,private,none,0,1,0,1.1,3.1929,General Medicine|Urology|General Surgery|Obstetrics|Nephrology|Oncology
+H006,District_032,private,none,1,0,0,1.1,0.7029,General Medicine|Orthopaedics|Oncology
+H007,District_017,private,none,0,0,0,1.0,1.026,General Medicine
+H008,District_013,public,none,1,0,0,1.1,1.24,General Medicine|Oncology|Obstetrics|Urology|Orthopaedics|Nephrology
+H009,District_029,private,none,1,0,0,1.1,0.6091,General Medicine|General Surgery|Urology
+H010,District_007,public,none,1,0,0,1.1,1.4578,General Medicine|Cardiology|Obstetrics
+H011,District_010,private,entry,0,1,1,1.331,0.6526,General Medicine|General Surgery|Orthopaedics
+H012,District_001,public,none,0,0,0,1.0,0.7194,General Medicine|Oncology|Nephrology
+H013,District_031,private,none,0,0,0,1.0,2.9746,General Medicine|Ophthalmology|Obstetrics|Orthopaedics
+H014,District_028,private,none,0,0,0,1.0,0.435,General Medicine|Ophthalmology|General Surgery
+H015,District_030,private,entry,1,0,0,1.21,0.1451,General Medicine|Urology
+H016,District_031,private,none,0,0,0,1.0,3.6282,General Medicine|General Surgery|Orthopaedics|Cardiology|Oncology|Urology|Ophthalmology|Nephrology|Obstetrics
+H017,District_019,private,none,0,1,0,1.1,7.6865,General Medicine|Cardiology|Obstetrics|General Surgery|Nephrology|Orthopaedics|Ophthalmology|Urology|Oncology
+H018,District_024,private,full,0,1,0,1.265,0.7231,General Medicine|Nephrology
+H019,District_007,private,full,0,0,0,1.15,0.2124,General Medicine|Urology|Orthopaedics
+H020,District_005,private,none,0,0,0,1.0,0.7801,General Medicine|Cardiology|Obstetrics|Oncology
+H021,District_028,private,none,0,0,0,1.0,0.7953,General Medicine|Urology|Orthopaedics
+H022,District_020,public,none,1,0,1,1.21,0.859,General Medicine|Orthopaedics|Oncology|Ophthalmology|Nephrology|Obstetrics
+H023,District_024,public,none,0,0,0,1.0,0.4104,General Medicine|Orthopaedics
+H024,District_031,public,none,0,0,0,1.0,1.5899,General Medicine|Ophthalmology|Nephrology|Obstetrics
+H025,District_027,private,none,0,0,0,1.0,1.5214,General Medicine|Cardiology
+H026,District_023,public,none,0,1,0,1.1,0.3025,General Medicine|General Surgery|Orthopaedics
+H027,District_023,private,none,1,0,0,1.1,1.7495,General Medicine|Urology
+H028,District_014,private,none,0,1,0,1.1,5.1663,General Medicine|Ophthalmology|Obstetrics|General Surgery|Orthopaedics|Cardiology|Urology
+H029,District_002,public,none,0,1,0,1.1,1.1475,General Medicine|Nephrology
+H030,District_019,private,entry,0,0,0,1.1,0.7635,General Medicine|Obstetrics|General Surgery
+H031,District_011,private,entry,1,0,0,1.21,0.8926,General Medicine|Oncology|Cardiology|Urology|Nephrology
+H032,District_017,public,none,0,0,0,1.0,1.6359,General Medicine|Urology
+H033,District_035,public,none,0,0,0,1.0,0.2504,General Medicine|General Surgery
+H034,District_011,public,none,0,1,0,1.1,1.1406,General Medicine|Nephrology|Obstetrics|Orthopaedics
+H035,District_003,public,none,1,0,0,1.1,0.7317,General Medicine|Urology|Oncology
+H036,District_013,public,none,0,0,0,1.0,4.3853,General Medicine|Obstetrics|Oncology|Cardiology
+H037,District_013,private,entry,0,1,0,1.21,0.8699,General Medicine|General Surgery
+H038,District_028,public,entry,1,0,0,1.21,3.7974,General Medicine|Obstetrics|Nephrology|Ophthalmology|Oncology|General Surgery|Orthopaedics|Urology
+H039,District_023,public,entry,0,0,0,1.1,0.4135,General Medicine|Urology
+H040,District_031,private,entry,0,0,0,1.1,1.5997,General Medicine|Ophthalmology|Obstetrics
+H041,District_028,private,full,1,0,0,1.265,1.2911,General Medicine|Cardiology
+H042,District_017,private,none,1,0,0,1.1,0.499,General Medicine|Orthopaedics|Oncology
+H043,District_032,private,full,0,0,0,1.15,1.1525,General Medicine|Nephrology|General Surgery|Orthopaedics|Oncology|Obstetrics
+H044,District_008,private,none,1,0,0,1.1,2.638,General Medicine|Urology|Ophthalmology|Cardiology
+H045,District_001,public,none,0,0,0,1.0,0.7718,General Medicine|General Surgery
+H046,District_004,private,none,0,0,0,1.0,0.2583,General Medicine|Oncology|Orthopaedics|General Surgery
+H047,District_030,private,none,0,0,0,1.0,0.986,General Medicine|Oncology|Cardiology|General Surgery
+H048,District_020,private,none,0,0,0,1.0,0.4858,General Medicine|Oncology
+H049,District_008,public,none,0,0,0,1.0,0.7604,General Medicine|Nephrology|Urology|Obstetrics|Orthopaedics
+H050,District_021,private,none,0,0,1,1.1,0.9368,General Medicine|Orthopaedics
+H051,District_007,private,none,0,1,1,1.21,0.2555,General Medicine
+H052,District_029,public,entry,0,0,0,1.1,0.2746,General Medicine|Cardiology
+H053,District_019,private,none,0,1,0,1.1,1.4706,General Medicine|General Surgery|Cardiology|Urology
+H054,District_016,private,none,0,1,0,1.1,0.6582,General Medicine|Ophthalmology
+H055,District_014,public,none,0,1,0,1.1,0.1285,General Medicine|Oncology
+H056,District_027,private,none,0,0,0,1.0,1.8736,General Medicine|Urology
+H057,District_015,private,none,1,0,0,1.1,1.2435,General Medicine|Nephrology|Cardiology
+H058,District_004,public,entry,0,0,0,1.1,0.5649,General Medicine|Urology|Obstetrics
+H059,District_006,private,none,1,0,0,1.1,0.3487,General Medicine|Orthopaedics|Oncology|Obstetrics
+H060,District_039,public,none,0,0,0,1.0,1.9516,General Medicine|Obstetrics|Oncology|Orthopaedics|Ophthalmology|General Surgery
+H061,District_036,public,none,0,0,0,1.0,1.3224,General Medicine|Nephrology|Ophthalmology
+H062,District_029,private,none,0,0,0,1.0,6.7267,General Medicine|General Surgery|Cardiology|Oncology|Nephrology|Ophthalmology|Urology|Orthopaedics|Obstetrics
+H063,District_012,private,entry,1,0,0,1.21,1.3996,General Medicine|Oncology|Orthopaedics|Ophthalmology|Urology
+H064,District_040,public,none,0,1,0,1.1,1.3636,General Medicine
+H065,District_031,private,entry,0,0,0,1.1,0.875,General Medicine
+H066,District_030,private,none,0,0,0,1.0,1.9221,General Medicine|Nephrology|General Surgery
+H067,District_019,public,none,0,0,0,1.0,1.6488,General Medicine|Oncology|Orthopaedics|Urology
+H068,District_012,private,none,0,0,0,1.0,2.722,General Medicine|Urology|Ophthalmology|Orthopaedics
+H069,District_004,public,entry,0,0,0,1.1,0.659,General Medicine|Oncology|Nephrology|Urology|Ophthalmology
+H070,District_036,private,full,1,0,0,1.265,0.7059,General Medicine|Oncology|General Surgery|Cardiology|Orthopaedics
+H071,District_019,private,none,0,0,0,1.0,0.6816,General Medicine
+H072,District_010,private,entry,1,0,0,1.21,1.8826,General Medicine|Oncology|General Surgery|Urology|Orthopaedics|Ophthalmology
+H073,District_014,public,none,0,0,0,1.0,3.3158,General Medicine|Ophthalmology|Nephrology|Oncology
+H074,District_024,private,none,0,1,0,1.1,0.6928,General Medicine
+H075,District_009,public,full,0,0,0,1.15,0.7119,General Medicine|Obstetrics
+H076,District_035,public,none,1,0,0,1.1,1.2856,General Medicine|Cardiology|Urology|Nephrology|Oncology
+H077,District_031,public,none,1,0,0,1.1,0.8215,General Medicine|Nephrology|Obstetrics
+H078,District_030,private,none,0,0,0,1.0,2.1418,General Medicine|Nephrology|Ophthalmology
+H079,District_019,public,none,0,1,0,1.1,0.1651,General Medicine|General Surgery
+H080,District_027,private,entry,0,1,0,1.21,0.5161,General Medicine|Oncology
+H081,District_025,private,none,0,0,0,1.0,0.5348,General Medicine
+H082,District_028,public,none,1,0,0,1.1,0.1563,General Medicine|Orthopaedics
+H083,District_004,public,none,0,0,0,1.0,0.4626,General Medicine|Ophthalmology|Urology
+H084,District_018,public,none,0,0,0,1.0,0.4809,General Medicine
+H085,District_003,private,entry,0,0,0,1.1,0.8514,General Medicine|General Surgery|Urology
+H086,District_021,private,entry,0,0,0,1.1,2.436,General Medicine|Obstetrics|Urology|Orthopaedics|Nephrology|General Surgery|Ophthalmology|Oncology
+H087,District_014,public,none,0,0,0,1.0,0.822,General Medicine|General Surgery|Obstetrics
+H088,District_007,private,none,0,0,0,1.0,0.4384,General Medicine
+H089,District_004,public,none,1,0,0,1.1,0.9555,General Medicine
+H090,District_025,private,none,0,0,0,1.0,2.3148,General Medicine|Ophthalmology|Orthopaedics|Oncology|Obstetrics
+H091,District_008,private,none,0,0,0,1.0,0.4581,General Medicine|Orthopaedics
+H092,District_037,private,none,1,0,0,1.1,0.4827,General Medicine|General Surgery|Ophthalmology
+H093,District_024,private,none,0,0,0,1.0,1.5634,General Medicine|Obstetrics
+H094,District_015,private,none,0,0,0,1.0,0.8376,General Medicine|Urology|Ophthalmology|Oncology
+H095,District_025,public,none,0,0,0,1.0,1.6786,General Medicine|General Surgery|Urology|Obstetrics
+H096,District_001,public,none,0,0,0,1.0,0.9891,General Medicine|General Surgery|Nephrology|Orthopaedics
+H097,District_039,public,entry,0,0,0,1.1,1.753,General Medicine|Orthopaedics|Obstetrics|Oncology
+H098,District_021,private,none,0,0,0,1.0,0.4369,General Medicine
+H099,District_031,private,none,0,1,1,1.21,0.9904,General Medicine|Ophthalmology|Oncology|Obstetrics
+H100,District_004,private,entry,0,0,0,1.1,0.8449,General Medicine|Nephrology|Orthopaedics
+H101,District_021,private,entry,0,1,0,1.21,0.3781,General Medicine|Obstetrics
+H102,District_021,public,none,1,0,0,1.1,0.2863,General Medicine|Nephrology|Cardiology|Ophthalmology
+H103,District_037,private,none,0,1,0,1.1,1.7308,General Medicine|Nephrology|General Surgery|Urology|Orthopaedics|Oncology
+H104,District_024,public,none,1,0,0,1.1,0.7552,General Medicine|Nephrology|Urology|General Surgery
+H105,District_020,public,none,0,0,0,1.0,0.4414,General Medicine
+H106,District_012,private,none,1,0,0,1.1,0.9259,General Medicine|Orthopaedics
+H107,District_014,private,none,0,0,0,1.0,2.4656,General Medicine|Ophthalmology|Oncology|Cardiology
+H108,District_023,private,none,1,0,0,1.1,0.1613,General Medicine
+H109,District_019,public,none,0,0,0,1.0,0.302,General Medicine|Orthopaedics|Obstetrics|Oncology
+H110,District_001,private,full,0,0,0,1.15,0.4779,General Medicine|Urology
+H111,District_033,public,none,0,0,0,1.0,3.2186,General Medicine|Obstetrics|Urology|General Surgery|Oncology
+H112,District_036,private,entry,0,0,0,1.1,1.2537,General Medicine|Ophthalmology|Obstetrics|General Surgery
+H113,District_007,private,full,0,0,1,1.265,1.8475,General Medicine|Oncology|General Surgery|Obstetrics
+H114,District_023,public,entry,0,0,1,1.21,0.4017,General Medicine|Ophthalmology
+H115,District_004,public,none,0,0,0,1.0,0.4084,General Medicine|General Surgery
+H116,District_028,public,entry,0,0,0,1.1,1.4308,General Medicine|Cardiology|Obstetrics|Ophthalmology|Nephrology|Orthopaedics|General Surgery|Oncology|Urology
+H117,District_013,private,none,0,0,0,1.0,1.0477,General Medicine|Orthopaedics
+H118,District_028,private,none,0,0,0,1.0,1.5511,General Medicine|Orthopaedics|Urology|Cardiology|General Surgery|Ophthalmology|Nephrology|Oncology
+H119,District_030,private,entry,1,0,0,1.21,0.8606,General Medicine|Orthopaedics
+H120,District_031,private,none,0,0,0,1.0,1.2492,General Medicine|Obstetrics|Ophthalmology|Orthopaedics
+H121,District_004,private,none,0,0,0,1.0,1.1348,General Medicine|General Surgery|Orthopaedics
+H122,District_036,public,none,0,0,0,1.0,1.863,General Medicine|Cardiology|Nephrology|Urology
+H123,District_011,private,entry,0,0,0,1.1,1.9071,General Medicine|Cardiology|Urology|General Surgery|Ophthalmology|Oncology
+H124,District_002,public,none,1,0,0,1.1,0.2737,General Medicine|Oncology|Obstetrics
+H125,District_023,private,none,0,1,1,1.21,0.1657,General Medicine|Obstetrics
+H126,District_016,private,entry,0,1,0,1.21,2.2287,General Medicine|Nephrology|Ophthalmology|Cardiology|Obstetrics
+H127,District_033,private,none,1,0,0,1.1,2.5862,General Medicine|Cardiology|Oncology|Ophthalmology|General Surgery|Obstetrics
+H128,District_032,private,none,1,0,0,1.1,0.442,General Medicine|Nephrology|General Surgery|Obstetrics
+H129,District_014,public,none,0,1,0,1.1,0.2259,General Medicine
+H130,District_038,private,full,0,0,0,1.15,1.0825,General Medicine|General Surgery|Ophthalmology
+H131,District_013,public,none,0,0,0,1.0,2.1057,General Medicine|Urology
+H132,District_022,private,none,0,0,0,1.0,4.2126,General Medicine|General Surgery|Oncology|Urology|Cardiology|Obstetrics|Nephrology|Ophthalmology
+H133,District_012,public,none,0,0,0,1.0,1.5114,General Medicine|General Surgery|Obstetrics|Ophthalmology|Oncology|Cardiology|Nephrology|Orthopaedics
+H134,District_037,public,entry,0,0,0,1.1,0.7428,General Medicine|Obstetrics|General Surgery|Nephrology
+H135,District_008,public,none,0,1,0,1.1,0.4894,General Medicine|Obstetrics|Urology|Oncology|Nephrology|Cardiology
+H136,District_003,public,none,0,0,0,1.0,1.0092,General Medicine|Urology|Ophthalmology
+H137,District_019,public,full,1,0,0,1.265,0.7871,General Medicine|Obstetrics|Orthopaedics|General Surgery|Nephrology
+H138,District_040,private,none,0,1,0,1.1,0.4439,General Medicine
+H139,District_036,private,none,0,0,0,1.0,5.15,General Medicine|Urology|Cardiology|Orthopaedics|Ophthalmology|Nephrology
+H140,District_031,public,none,0,1,0,1.1,4.1709,General Medicine|Orthopaedics|Ophthalmology|General Surgery|Obstetrics|Oncology|Cardiology|Nephrology|Urology
+H141,District_036,public,entry,0,0,0,1.1,2.4814,General Medicine|Orthopaedics|Cardiology|Ophthalmology|Nephrology|General Surgery
+H142,District_036,public,none,0,0,0,1.0,0.4787,General Medicine|Ophthalmology|Oncology|Obstetrics
+H143,District_023,private,none,0,0,0,1.0,1.9818,General Medicine|Oncology|Cardiology
+H144,District_014,public,none,0,0,0,1.0,1.6681,General Medicine|Oncology|Urology|Cardiology|Orthopaedics|Nephrology|General Surgery|Obstetrics
+H145,District_031,public,none,1,0,0,1.1,1.4248,General Medicine|Obstetrics|Oncology
+H146,District_028,public,none,0,0,0,1.0,2.7176,General Medicine|Nephrology|Obstetrics|Urology
+H147,District_016,private,none,0,0,0,1.0,1.6625,General Medicine|Ophthalmology|General Surgery
+H148,District_004,public,none,0,0,0,1.0,1.8076,General Medicine|Obstetrics|Nephrology|Oncology
+H149,District_031,private,entry,0,0,0,1.1,1.6645,General Medicine|Orthopaedics
+H150,District_012,private,none,0,0,0,1.0,1.3134,General Medicine|Oncology
+H151,District_037,private,none,1,0,0,1.1,0.2401,General Medicine|Obstetrics|Ophthalmology
+H152,District_011,private,none,0,1,0,1.1,1.0692,General Medicine|Cardiology|Nephrology|Orthopaedics
+H153,District_006,private,none,0,0,0,1.0,0.6409,General Medicine|Ophthalmology|General Surgery|Nephrology
+H154,District_033,public,none,0,0,0,1.0,0.3592,General Medicine|Ophthalmology|Oncology
+H155,District_008,private,none,0,0,1,1.1,3.8399,General Medicine|Nephrology|Urology
+H156,District_009,private,none,0,0,0,1.0,3.9876,General Medicine|Nephrology|Orthopaedics|Urology|Cardiology|Obstetrics
+H157,District_026,public,none,1,0,0,1.1,2.9665,General Medicine|Obstetrics|Urology|General Surgery|Cardiology|Oncology|Ophthalmology|Nephrology|Orthopaedics
+H158,District_035,private,none,1,0,0,1.1,1.2265,General Medicine|Obstetrics|General Surgery|Orthopaedics|Nephrology
+H159,District_010,public,none,0,0,0,1.0,2.9462,General Medicine|Nephrology|Urology|Orthopaedics|Cardiology|Ophthalmology|Obstetrics|Oncology|General Surgery
+H160,District_014,private,none,0,0,0,1.0,1.0097,General Medicine|Cardiology|Ophthalmology
+H161,District_031,private,entry,0,0,1,1.21,1.1761,General Medicine
+H162,District_040,private,none,0,1,0,1.1,0.417,General Medicine|Nephrology
+H163,District_021,private,none,0,1,0,1.1,1.3738,General Medicine|Cardiology|Oncology
+H164,District_007,private,none,0,0,1,1.1,1.0495,General Medicine
+H165,District_001,private,none,0,0,0,1.0,0.3527,General Medicine|Nephrology
+H166,District_011,private,none,0,0,0,1.0,0.9599,General Medicine|Cardiology|General Surgery
+H167,District_007,public,none,0,0,0,1.0,0.9382,General Medicine|Ophthalmology
+H168,District_029,private,none,0,0,0,1.0,4.2125,General Medicine|Orthopaedics|Cardiology|Urology|Nephrology
+H169,District_006,private,none,0,0,0,1.0,2.0449,General Medicine|Ophthalmology|Orthopaedics|Obstetrics
+H170,District_022,public,none,0,1,0,1.1,1.0092,General Medicine|General Surgery|Urology
+H171,District_029,public,none,1,0,0,1.1,1.2202,General Medicine|Orthopaedics|Urology|Nephrology|Ophthalmology
+H172,District_025,private,entry,0,1,0,1.21,1.036,General Medicine
+H173,District_010,public,none,0,0,0,1.0,0.8502,General Medicine|Obstetrics
+H174,District_032,public,entry,0,0,0,1.1,0.4207,General Medicine
+H175,District_030,public,none,0,0,1,1.1,0.8862,General Medicine|Ophthalmology|General Surgery|Obstetrics|Nephrology
+H176,District_031,public,entry,0,0,0,1.1,0.5505,General Medicine|Cardiology|Orthopaedics|Oncology|Nephrology|Ophthalmology
+H177,District_007,public,none,1,0,0,1.1,0.3678,General Medicine
+H178,District_006,private,none,0,0,0,1.0,1.5053,General Medicine|Nephrology
+H179,District_037,public,none,0,0,1,1.1,1.3675,General Medicine|Oncology|Cardiology|Orthopaedics|Nephrology
+H180,District_017,private,none,0,0,0,1.0,0.2395,General Medicine
+H181,District_013,private,entry,0,0,0,1.1,0.9065,General Medicine|Oncology|Obstetrics|Ophthalmology
+H182,District_021,public,none,0,0,0,1.0,2.2179,General Medicine|Oncology|Nephrology|Obstetrics|Urology|General Surgery
+H183,District_028,public,none,0,0,0,1.0,2.3335,General Medicine|Obstetrics|General Surgery
+H184,District_039,private,none,0,0,0,1.0,2.272,General Medicine|Urology|Ophthalmology|Obstetrics|Cardiology|Nephrology|Oncology|General Surgery
+H185,District_013,public,full,0,0,0,1.15,1.0316,General Medicine|General Surgery
+H186,District_037,public,none,0,0,0,1.0,0.5086,General Medicine|General Surgery|Cardiology
+H187,District_001,private,none,1,0,0,1.1,0.4202,General Medicine|Urology|Nephrology
+H188,District_023,private,entry,0,1,0,1.21,1.3174,General Medicine|Ophthalmology|Orthopaedics
+H189,District_027,private,full,0,0,0,1.15,1.3545,General Medicine|General Surgery|Orthopaedics
+H190,District_004,public,none,1,0,0,1.1,2.8007,General Medicine|Cardiology|Ophthalmology
+H191,District_007,private,none,0,1,0,1.1,2.4109,General Medicine
+H192,District_018,private,entry,0,0,0,1.1,0.8996,General Medicine|Ophthalmology|Oncology
+H193,District_039,public,none,0,1,0,1.1,0.3696,General Medicine|General Surgery|Oncology|Urology
+H194,District_025,private,none,0,0,0,1.0,0.7747,General Medicine|Cardiology|Obstetrics
+H195,District_037,public,none,0,0,0,1.0,1.1898,General Medicine|Cardiology|Orthopaedics|Oncology|Obstetrics
+H196,District_032,public,none,0,1,0,1.1,0.8507,General Medicine|General Surgery
+H197,District_020,private,none,0,0,0,1.0,0.6298,General Medicine|Orthopaedics|Ophthalmology|Urology|Nephrology
+H198,District_031,public,none,0,0,0,1.0,1.2242,General Medicine|General Surgery|Oncology|Nephrology|Obstetrics
+H199,District_001,public,none,0,0,1,1.1,0.6682,General Medicine|Urology
+H200,District_005,private,none,0,0,0,1.0,0.605,General Medicine|Obstetrics
+H201,District_033,private,none,1,0,0,1.1,1.283,General Medicine|General Surgery|Urology|Cardiology
+H202,District_032,private,none,0,0,0,1.0,0.725,General Medicine|Orthopaedics|Nephrology
+H203,District_011,private,none,0,0,0,1.0,1.2157,General Medicine|Oncology
+H204,District_023,private,none,0,0,0,1.0,1.2443,General Medicine|Obstetrics|Oncology
+H205,District_026,public,none,0,0,1,1.1,0.4019,General Medicine|General Surgery|Ophthalmology|Cardiology|Nephrology
+H206,District_035,public,none,0,0,0,1.0,0.6805,General Medicine|Obstetrics
+H207,District_026,public,none,0,0,0,1.0,3.1589,General Medicine|Ophthalmology|Cardiology
+H208,District_018,public,full,0,0,0,1.15,0.3947,General Medicine|Obstetrics
+H209,District_016,private,none,0,0,0,1.0,0.1839,General Medicine
+H210,District_019,public,entry,0,1,1,1.331,0.2255,General Medicine
+H211,District_028,private,none,0,0,0,1.0,1.0236,General Medicine|Oncology|General Surgery
+H212,District_035,public,none,0,0,1,1.1,1.025,General Medicine
+H213,District_019,public,full,0,1,0,1.265,0.9102,General Medicine|Urology|Oncology|Cardiology|Nephrology
+H214,District_012,private,entry,0,0,0,1.1,2.6415,General Medicine|Oncology|Obstetrics|General Surgery|Nephrology|Urology|Ophthalmology|Cardiology|Orthopaedics
+H215,District_011,public,none,1,0,0,1.1,0.1179,General Medicine|Orthopaedics|General Surgery
+H216,District_031,public,none,1,0,0,1.1,1.3727,General Medicine
+H217,District_033,public,none,0,1,1,1.21,3.4874,General Medicine|Obstetrics|Urology|Orthopaedics|Nephrology|Ophthalmology
+H218,District_004,private,none,0,0,1,1.1,0.4057,General Medicine|General Surgery
+H219,District_003,private,none,1,0,0,1.1,0.738,General Medicine
+H220,District_025,private,full,0,1,0,1.265,0.5475,General Medicine|Urology|Oncology
+H221,District_007,public,none,1,0,0,1.1,0.489,General Medicine|Urology|Oncology
+H222,District_033,public,none,0,0,0,1.0,0.7703,General Medicine
+H223,District_014,private,none,0,0,0,1.0,3.133,General Medicine|Orthopaedics|Ophthalmology|Oncology|Nephrology|Obstetrics|General Surgery
+H224,District_007,private,none,0,0,1,1.1,4.3488,General Medicine|Oncology|Ophthalmology|Obstetrics|Orthopaedics
+H225,District_037,private,none,0,0,0,1.0,0.7643,General Medicine|Obstetrics|Nephrology|Cardiology
+H226,District_008,private,none,0,0,0,1.0,4.5908,General Medicine|General Surgery|Urology|Ophthalmology|Oncology|Nephrology
+H227,District_013,private,none,0,0,0,1.0,1.0289,General Medicine|Urology
+H228,District_008,public,none,1,0,0,1.1,4.0672,General Medicine|General Surgery|Cardiology|Urology|Ophthalmology
+H229,District_005,public,none,0,1,0,1.1,0.9281,General Medicine|Orthopaedics|Cardiology|General Surgery
+H230,District_001,private,none,0,0,0,1.0,1.1105,General Medicine|Urology|General Surgery
+H231,District_003,public,entry,0,1,0,1.21,1.3396,General Medicine|General Surgery
+H232,District_009,private,none,0,0,0,1.0,12.7188,General Medicine|Urology|Nephrology|Oncology|Orthopaedics|Obstetrics|General Surgery|Cardiology|Ophthalmology
+H233,District_003,private,none,0,1,0,1.1,1.9759,General Medicine|Nephrology|Urology|Oncology
+H234,District_025,private,none,0,0,0,1.0,0.5679,General Medicine|Oncology
+H235,District_029,private,none,0,0,0,1.0,2.171,General Medicine|Cardiology|Orthopaedics|Ophthalmology
+H236,District_017,private,none,1,0,0,1.1,0.7487,General Medicine|Ophthalmology|Cardiology|Orthopaedics|Urology
+H237,District_014,private,none,0,0,0,1.0,0.6758,General Medicine|Ophthalmology|General Surgery
+H238,District_022,private,none,0,1,0,1.1,2.0686,General Medicine|Orthopaedics
+H239,District_035,private,full,0,0,0,1.15,1.0252,General Medicine|Obstetrics|Ophthalmology|Oncology
+H240,District_035,public,none,1,0,0,1.1,1.2496,General Medicine|Nephrology|Cardiology
+H241,District_003,private,none,0,0,0,1.0,1.0113,General Medicine
+H242,District_009,private,none,0,0,0,1.0,1.309,General Medicine
+H243,District_011,public,full,0,0,0,1.15,1.4049,General Medicine|Cardiology|Oncology|Urology|Obstetrics|Nephrology
+H244,District_012,public,full,1,0,0,1.265,0.2123,General Medicine|Oncology
+H245,District_024,private,none,1,0,0,1.1,1.7045,General Medicine|General Surgery|Obstetrics
+H246,District_018,private,none,0,1,0,1.1,0.4558,General Medicine|Ophthalmology|Cardiology|Obstetrics
+H247,District_003,public,none,1,0,0,1.1,0.3154,General Medicine
+H248,District_016,public,entry,0,0,0,1.1,0.9543,General Medicine|Obstetrics|Cardiology
+H249,District_023,public,none,0,0,0,1.0,1.0695,General Medicine|Nephrology|General Surgery
+H250,District_004,public,none,0,0,0,1.0,0.5742,General Medicine
+H251,District_034,private,none,0,0,0,1.0,1.9442,General Medicine|Cardiology|Nephrology|Obstetrics|Oncology|Ophthalmology
+H252,District_003,public,none,1,0,0,1.1,0.3417,General Medicine
+H253,District_037,public,entry,1,0,0,1.21,0.7221,General Medicine|General Surgery|Orthopaedics
+H254,District_004,private,none,0,1,0,1.1,0.6263,General Medicine
+H255,District_034,public,none,0,0,0,1.0,0.9634,General Medicine|Urology|Orthopaedics
+H256,District_036,public,none,0,0,0,1.0,1.2499,General Medicine|Ophthalmology|Nephrology|Oncology
+H257,District_040,private,none,1,0,0,1.1,0.4465,General Medicine|Ophthalmology|Nephrology|Obstetrics
+H258,District_032,private,none,0,1,0,1.1,1.785,General Medicine|Orthopaedics|General Surgery|Oncology
+H259,District_031,private,none,0,0,0,1.0,1.0517,General Medicine|Obstetrics|Nephrology
+H260,District_027,private,none,0,0,0,1.0,0.2201,General Medicine|Orthopaedics
+H261,District_031,private,none,1,0,0,1.1,0.2087,General Medicine
+H262,District_007,private,none,0,1,0,1.1,0.9902,General Medicine
+H263,District_023,private,none,1,0,0,1.1,0.838,General Medicine
+H264,District_022,private,none,0,0,1,1.1,0.9206,General Medicine|Orthopaedics|General Surgery
+H265,District_035,private,none,0,0,0,1.0,0.9779,General Medicine|Nephrology|General Surgery|Cardiology
+H266,District_020,private,none,0,0,0,1.0,1.1978,General Medicine|Nephrology
+H267,District_017,private,none,0,0,0,1.0,2.1343,General Medicine|Obstetrics|Cardiology|General Surgery|Oncology|Urology|Orthopaedics|Nephrology
+H268,District_027,public,none,0,0,0,1.0,0.4111,General Medicine|General Surgery|Obstetrics
+H269,District_012,private,none,1,0,0,1.1,0.3916,General Medicine
+H270,District_007,public,none,1,0,1,1.21,0.417,General Medicine|Nephrology
+H271,District_020,private,none,0,0,0,1.0,1.26,General Medicine|Obstetrics|Oncology
+H272,District_018,private,entry,0,1,0,1.21,2.7073,General Medicine|Ophthalmology|Nephrology|General Surgery|Urology|Oncology
+H273,District_011,private,none,1,0,0,1.1,0.7082,General Medicine|Ophthalmology|Urology|General Surgery
+H274,District_015,private,none,1,0,0,1.1,0.1352,General Medicine|Obstetrics
+H275,District_015,public,full,0,0,0,1.15,0.2558,General Medicine|Urology
+H276,District_014,private,none,1,0,0,1.1,0.5135,General Medicine|Orthopaedics|Obstetrics|General Surgery
+H277,District_016,private,none,1,0,0,1.1,0.6401,General Medicine|Cardiology|Ophthalmology|Obstetrics
+H278,District_029,public,none,0,1,0,1.1,0.7213,General Medicine|Ophthalmology
+H279,District_013,public,none,0,0,0,1.0,1.0313,General Medicine|Oncology|Ophthalmology
+H280,District_038,public,none,0,0,0,1.0,0.7793,General Medicine|Nephrology|Ophthalmology
+H281,District_036,private,none,0,0,0,1.0,2.3151,General Medicine|Obstetrics|Urology|Nephrology
+H282,District_020,private,none,1,0,1,1.21,0.5823,General Medicine|Oncology|General Surgery
+H283,District_014,private,none,0,0,0,1.0,0.5016,General Medicine|Orthopaedics|Ophthalmology
+H284,District_023,private,none,0,0,1,1.1,1.4668,General Medicine|Ophthalmology
+H285,District_035,private,none,0,0,0,1.0,0.2927,General Medicine|Ophthalmology|Oncology
+H286,District_028,public,none,1,0,0,1.1,1.3658,General Medicine|Ophthalmology|Orthopaedics
+H287,District_032,private,none,1,0,0,1.1,1.0855,General Medicine|Orthopaedics
+H288,District_023,public,full,1,0,0,1.265,0.8887,General Medicine|Nephrology|Oncology|Ophthalmology
+H289,District_027,private,none,0,0,0,1.0,3.5631,General Medicine|Orthopaedics|Obstetrics|Ophthalmology|Oncology|General Surgery
+H290,District_013,private,none,0,0,0,1.0,0.6079,General Medicine|Nephrology
+H291,District_031,private,none,0,0,0,1.0,5.1978,General Medicine|Oncology|Obstetrics|Orthopaedics|Ophthalmology|Nephrology|Cardiology|General Surgery|Urology
+H292,District_010,private,none,0,0,0,1.0,0.835,General Medicine|Cardiology|Nephrology
+H293,District_029,public,none,0,0,0,1.0,0.36,General Medicine|Urology
+H294,District_035,public,none,0,0,0,1.0,1.0575,General Medicine|Nephrology
+H295,District_007,public,none,1,0,0,1.1,0.4227,General Medicine|Ophthalmology|Urology|Orthopaedics
+H296,District_026,public,none,0,0,0,1.0,0.548,General Medicine|Ophthalmology
+H297,District_004,private,none,0,0,1,1.1,1.3739,General Medicine|Ophthalmology|General Surgery|Cardiology|Oncology|Orthopaedics
+H298,District_030,private,none,1,0,0,1.1,1.5597,General Medicine
+H299,District_004,private,none,0,0,0,1.0,0.6079,General Medicine|Nephrology|Orthopaedics|Obstetrics|Ophthalmology
+H300,District_037,private,none,0,0,1,1.1,2.2032,General Medicine

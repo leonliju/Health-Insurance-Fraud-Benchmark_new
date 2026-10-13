@@ -1,0 +1,17 @@
+package_code,package_name,hbp_code,diagnosis_code,specialty,pricing,reference_package_rate,sex,public_reserved,max_per_patient,min_gap_days,los_mean,repeat_mean
+PKG-01,Medical management: diabetic ketoacidosis,MG059A,E11,General Medicine,per_day,2100,any,False,0,0,4,0
+PKG-02,PTCA with one bare-metal stent,MC011A,I21,Cardiology,fixed,49300,any,False,0,0,3,0
+PKG-03,Right/left heart catheterization,MC001A/B,I25,Cardiology,fixed,10000,any,False,0,0,1,0
+PKG-04,Medical management: pneumonia,MG016A,J18,General Medicine,per_day,2100,any,False,0,0,5,0
+PKG-05,Medical management: pleural tuberculosis,MG020B,A15,General Medicine,per_day,2100,any,False,0,0,6,0
+PKG-06,Medical management: dengue haemorrhagic fever,MG004B,A91,General Medicine,per_day,2100,any,False,0,0,4,0
+PKG-07,Caesarean delivery,SO057A,O82,Obstetrics,fixed,11500,F,True,2,270,4,0
+PKG-08,High risk delivery (premature delivery),SO054A,O60,Obstetrics,fixed,11500,F,True,2,270,2,0
+PKG-09,Appendicectomy (open),SG017A,K35,General Surgery,fixed,19700,any,False,1,0,3,0
+PKG-10,"Cholecystectomy (laparoscopic, without CBD exploration)",SG039C,K80,General Surgery,fixed,27800,any,False,1,0,3,0
+PKG-11,Ureteroscopy with stone removal and lithotripsy (unilateral),SU014A,N20,Urology,fixed,28000,any,False,2,60,2,0
+PKG-12,Haemodialysis session,MG072A,N18,Nephrology,fixed,1500,any,False,1,0,1,110
+PKG-13,"Fracture neck of femur: intertrochanteric, dynamic hip screw",SB019B,S72,Orthopaedics,fixed,23400,any,False,1,0,7,0
+PKG-14,"Cataract surgery (phaco, foldable IOL)",SE020A,H25,Ophthalmology,fixed,7500,any,False,2,30,1,0
+PKG-15,TURP (monopolar),SU080A,N40,Urology,fixed,27500,M,False,1,0,3,0
+PKG-16,"Chemotherapy cycle: breast cancer (CA breast, EC/AC regimen)",MO001A,C50,Oncology,fixed,7200,F,False,1,0,2,7
