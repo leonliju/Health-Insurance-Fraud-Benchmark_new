@@ -1,4 +1,0 @@
-pandas>=2.0
-numpy>=1.24
-# optional, only for src/extract_hbp.py:
-# pdfplumber
