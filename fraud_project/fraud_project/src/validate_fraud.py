@@ -93,7 +93,7 @@ def main():
     row_mult = mult.reindex(fr["hospital_id"]).to_numpy()
     ph_rows = (m["fraud_type"] == "phantom").to_numpy()
     ph_ratio = fr["claimed_amount"].to_numpy()[ph_rows] / (fr["reference_package_rate"].to_numpy()[ph_rows] * row_mult[ph_rows])
-    check("phantom claims look like genuine billing (within 0.90 to 1.10 of reference x hospital multiplier)",
+    check(f"phantom claims look like genuine billing (within {clip[0]:.2f} to {clip[1]:.2f} of reference x hospital multiplier)",
           bool(pd.Series(ph_ratio).between(clip[0] - 0.01, clip[1] + 0.01).all()))
 
     # ---- genuine rows are untouched ----
@@ -112,9 +112,9 @@ def main():
     lo_o, hi_o = fc["upcoding"]["obvious_ratio"]
     lo_s, hi_s = fc["upcoding"]["subtle_ratio"]
     tol = 0.003
-    check("obvious amount inflation is 1.6 to 2.5 times the hospital's legitimate price",
+    check(f"obvious amount inflation is {lo_o} to {hi_o} times the hospital's legitimate price",
           bool(ratio[ai & (u["severity_tier"] == "obvious")].between(lo_o - tol, hi_o + tol).all()))
-    check("subtle amount inflation is 1.10 to 1.25 times the hospital's legitimate price",
+    check(f"subtle amount inflation is {lo_s} to {hi_s} times the hospital's legitimate price",
           bool(ratio[ai & (u["severity_tier"] == "subtle")].between(lo_s - tol, hi_s + tol).all()))
     sw = u[u["mechanism"] == "package_swap"]
     check("package swaps go to a pricier fixed-price package of the same specialty",
@@ -141,8 +141,10 @@ def main():
     sb = ~ob
     amt_ratio = dup[sb]["claimed_amount"] / src[sb]["claimed_amount"]
     clipped = (shift[sb] < fc["duplicate"]["subtle_shift_days"][0])  # shifted back/clipped at window edges
-    check("subtle duplicates: 3 to 14 days apart (except at window edges), amount within 3.5%",
-          bool(((shift[sb] <= fc["duplicate"]["subtle_shift_days"][1]).all() and amt_ratio.between(0.965, 1.035).all()
+    sd_lo, sd_hi = fc["duplicate"]["subtle_shift_days"]
+    an = fc["duplicate"]["subtle_amount_noise"] + 0.005   # +0.5 point for rounding to the nearest 10
+    check(f"subtle duplicates: {sd_lo} to {sd_hi} days apart (except at window edges), amount within {an:.1%}",
+          bool(((shift[sb] <= sd_hi).all() and amt_ratio.between(1 - an, 1 + an).all()
                 and clipped.mean() < 0.02)))
 
     # ---- phantom ----
@@ -176,6 +178,13 @@ def main():
     top = max(1, int(round(0.10 * fr["hospital_id"].nunique())))
     print(f"\nShare of fraud at the top 10% of hospitals by fraud count: {per_h.head(top).sum() / len(f):.0%} "
           f"(top 10% by claim volume would be about 10% to 25%)")
+    g_ratio = g["claimed_amount"].to_numpy() / (g["reference_package_rate"].to_numpy() * mult.reindex(g["hospital_id"]).to_numpy())
+    gq = np.quantile(g_ratio, [0.05, 0.95, 0.99])
+    sub_r = ratio[ai & (u["severity_tier"] == "subtle")]
+    print(f"\nGenuine claims: hospital-adjusted amount ratio range {g_ratio.min():.2f} to {g_ratio.max():.2f} "
+          f"(5th/95th/99th percentile {gq[0]:.2f}/{gq[1]:.2f}/{gq[2]:.2f}); {np.mean(g_ratio > fc['upcoding']['subtle_ratio'][0]):.1%} of genuine claims exceed the lowest subtle-upcoding ratio")
+    print(f"Subtle amount inflation inside the genuine 5th-95th percentile band: {sub_r.between(gq[0], gq[1]).mean():.1%} "
+          f"(0% would mean subtle upcoding is separable by amount alone)")
     gg = g.sort_values(["patient_id", "adm"]).copy()
     prev_dis = gg.groupby("patient_id")["dis"].shift()
     overlap = int((gg["adm"] < prev_dis).sum())

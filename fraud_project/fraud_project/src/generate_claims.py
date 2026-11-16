@@ -12,6 +12,7 @@ Realism rules built in (sources in the README):
   * caesarean and high risk delivery happen mostly at public hospitals (private by referral)
   * one-time surgeries (appendicectomy, cholecystectomy, TURP ...) are not repeated for a patient
   * dialysis and chemotherapy genuinely repeat (patterns checked against a Synthea run)
+  * v3: genuine readmissions (same patient, same medical package, a few weeks apart) that are not fraud
 
 Usage:
     python src/generate_claims.py --config config/params.json --out data_full
@@ -294,6 +295,42 @@ def generate(cfg, seed=None):
     if extra_frames:
         claims = pd.concat([claims] + [f.drop(columns="_k") for f in extra_frames], ignore_index=True)
 
+    # --- genuine readmissions (v3) -------------------------------------------------------
+    # The same patient is legitimately admitted again for the same medical package a few weeks later.
+    # They look like duplicate claims but are NOT fraud, so a detector cannot treat every short-gap repeat as fraud.
+    n_readmit = 0
+    ra = cfg.get("readmission")
+    if ra and ra.get("share", 0) > 0:
+        eligible = ((packages["pricing"].to_numpy() == "per_day")
+                    & (packages["repeat_mean"].to_numpy() == 0)
+                    & (packages["max_per_patient"].to_numpy() == 0))
+        pick = eligible[claims["pkg_idx"].to_numpy()] & (rng.random(len(claims)) < ra["share"])
+        src = claims.loc[pick].copy()
+        if len(src):
+            gap = rng.integers(ra["gap_days"][0], ra["gap_days"][1] + 1, len(src))
+            src["admission_date"] = src["admission_date"] + pd.to_timedelta(src["length_of_stay"].to_numpy() + gap, unit="D")
+            src = src[src["admission_date"] <= end].copy()
+            lm = packages["los_mean"].to_numpy()[src["pkg_idx"]]
+            ls = packages["los_sd"].to_numpy()[src["pkg_idx"]]
+            src["length_of_stay"] = np.clip(np.rint(rng.normal(lm, ls)).astype(int), 1, np.ceil(lm + 3 * ls).astype(int))
+            other = rng.random(len(src)) >= ra["same_hospital_prob"]
+            hosp_new = src["hospital_idx"].to_numpy().copy()
+            doc_new = src["doctor_pos"].to_numpy().copy()
+            for pos in np.flatnonzero(other):
+                spec = src["specialty"].iloc[pos]
+                pool = hosp_offers[spec]
+                pool = pool[pool != hosp_new[pos]]
+                if len(pool) == 0:
+                    continue
+                hosp_new[pos] = sample_from(pool, 1)[0]
+                ids, w = doc_lookup[(hosp_new[pos], spec)]
+                doc_new[pos] = rng.choice(ids, p=w / w.sum())
+            src["hospital_idx"] = hosp_new
+            src["doctor_pos"] = doc_new
+            claims = pd.concat([claims, src], ignore_index=True)
+            n_readmit = len(src)
+    cfg["_stats"] = {"n_readmit": n_readmit}
+
     # --- discharge, reference rate (fixed or per bed-day), amount with hospital uplift, age ---
     claims["discharge_date"] = claims["admission_date"] + pd.to_timedelta(claims["length_of_stay"], unit="D")
     _, bed_shares, bed_rates = bed_tables(cfg)
@@ -357,7 +394,8 @@ def main():
     doctors.to_csv(os.path.join(args.out, "doctors.csv"), index=False)
     packages.to_csv(os.path.join(args.out, "packages.csv"), index=False)
     print(f"Wrote {len(claims):,} claims, {len(patients):,} patients, {len(hospitals):,} hospitals, "
-          f"{len(doctors):,} doctors to {args.out}/ (one-time-surgery rules re-drew {n_redrawn:,} treatments)")
+          f"{len(doctors):,} doctors to {args.out}/ (one-time-surgery rules re-drew {n_redrawn:,} treatments; "
+          f"{cfg.get('_stats', {}).get('n_readmit', 0):,} genuine readmissions added)")
 
 
 if __name__ == "__main__":

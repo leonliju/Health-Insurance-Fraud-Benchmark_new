@@ -79,6 +79,12 @@ def main():
               "local_hospital_share", "doctor_extra_lambda", "amount_ratio_sigma"]:
         add("scale and mix", k, cfg[k], "", "assumption")
     add("scale and mix", "age buckets", json.dumps(cfg["age_buckets"]), "", "assumption")
+    add("scale and mix", "amount_ratio_clip (genuine price noise bounds)", json.dumps(cfg["amount_ratio_clip"]), "", "assumption",
+        "v3: widened so genuine billing overlaps subtle upcoding")
+    if "readmission" in cfg:
+        add("repeat treatment", "genuine readmissions (share, gap days, same-hospital probability)",
+            json.dumps({k: v for k, v in cfg["readmission"].items() if not k.startswith("_")}), "", "assumption",
+            "v3: legitimate repeat admissions that look like duplicates")
     fc = cfg["fraud"]
     add("fraud design", "type shares", json.dumps(fc["type_shares"]), "", "assumption", "definitions follow NHA's own list of abuse concerns (guidelines 2.2.4, 2.2.10, FAQ 34)")
     add("fraud design", "share obvious", fc["obvious_share"], "", "assumption")

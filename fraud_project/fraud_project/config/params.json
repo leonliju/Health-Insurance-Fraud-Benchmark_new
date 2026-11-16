@@ -1,5 +1,5 @@
 {
-  "_comment": "Package codes PKG-xx are internal labels. Rates are from the AB PM-JAY Health Benefit Package master HBP 2.2 (National Health Authority); see data/parameter_sources.csv for each parameter, its source and whether it is sourced or an assumption. Weights, age patterns, bed-category shares and hospital attribute shares are ASSUMPTIONS, not Indian statistics.",
+  "_comment": "Package codes PKG-xx are internal labels. Rates are from the AB PM-JAY Health Benefit Package master HBP 2.2 (National Health Authority); see data/parameter_sources.csv for each parameter, its source and whether it is sourced or an assumption. Weights, age patterns, bed-category shares and hospital attribute shares are ASSUMPTIONS, not Indian statistics. DATASET v3: genuine price noise widened and subtle fraud made harder after a pilot run showed subtle upcoding was separable by construction in v2 (see fraud.upcoding.subtle_ratio vs amount_ratio_clip).",
   "seed": 42,
   "window_start": "2023-01-01",
   "window_end": "2025-12-31",
@@ -34,10 +34,10 @@
   "share_public_hospitals": 0.45,
   "local_hospital_share": 0.8,
   "doctor_extra_lambda": 0.4,
-  "amount_ratio_sigma": 0.04,
+  "amount_ratio_sigma": 0.07,
   "amount_ratio_clip": [
-    0.9,
-    1.1
+    0.85,
+    1.3
   ],
   "packages": [
     {
@@ -430,8 +430,8 @@
         2.5
       ],
       "subtle_ratio": [
-        1.1,
-        1.25
+        1.06,
+        1.22
       ],
       "swap_probability": 0.5,
       "swap_amount_ratio": [
@@ -446,9 +446,9 @@
       ],
       "subtle_shift_days": [
         3,
-        14
+        30
       ],
-      "subtle_amount_noise": 0.03,
+      "subtle_amount_noise": 0.06,
       "subtle_same_hospital_prob": 0.5
     },
     "phantom": {
@@ -492,5 +492,15 @@
   },
   "private_referral_share": 0.08,
   "_private_referral_note": "Caesarean and high-risk delivery are mainly for government hospitals (private by referral): HBP 2.2 user guidelines 3.13. The 8% private share is an ASSUMPTION.",
-  "_amount_note": "Genuine claimed amount = reference rate x hospital incentive multiplier x small noise (implants, stratification)."
+  "_amount_note": "Genuine claimed amount = reference rate x hospital incentive multiplier x small noise (implants, stratification).",
+  "dataset_version": "v3",
+  "readmission": {
+    "_note": "v3: genuine readmissions. A share of medical (per bed-day) admissions is followed by a legitimate admission of the same patient for the same package within a few weeks, at the same hospital with the given probability. These look like duplicates but are NOT fraud. ASSUMPTION.",
+    "share": 0.1,
+    "gap_days": [
+      3,
+      21
+    ],
+    "same_hospital_prob": 0.6
+  }
 }
