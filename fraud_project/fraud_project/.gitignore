@@ -1,3 +1,26 @@
+# generated data and models (reproducible from config/params.json and the fixed seeds)
+data_v3/
 data_full/
+data_v2check/
+*.joblib
+*.pkl
+
+# adaptive experiment outputs and logs
+adaptive/
+round2_log*.txt
+*.log
+
+# python
 __pycache__/
 *.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# large official documents (keep a link instead)
+National_Master_Health_Benefit_packages_*.pdf
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

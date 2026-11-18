@@ -234,6 +234,23 @@ def main():
         help="Split containing fraudulent claims to adapt",
     )
 
+    # --- v3 additions: less predictable fraudster, attack any saved model, separate output folder ---
+    parser.add_argument(
+        "--ratio-mode", choices=["floor", "sampled"], default="floor",
+        help="floor: always try the minimum allowed upcoding ratio (original behaviour). "
+             "sampled: try --ratio-queries random ratios between the minimum and the current ratio "
+             "(a fraudster with a limited number of detector queries per claim)."
+    )
+    parser.add_argument("--ratio-queries", type=int, default=6,
+                        help="number of random ratios tried per upcoding claim in sampled mode")
+    parser.add_argument("--model-path", default=None,
+                        help="attack this saved model instead of models/<detector>_<tag>_<variant>.joblib "
+                             "(use it for round 2: attack the retrained model)")
+    parser.add_argument("--output-name", default=None,
+                        help="write to <dir>/adaptive/<output-name> instead of the default folder")
+    parser.add_argument("--seed-offset", type=int, default=901,
+                        help="added to the config seed; use a different value for each experiment")
+
     args = parser.parse_args()
     data_dir = Path(args.dir)
 
@@ -245,6 +262,8 @@ def main():
             data_dir / "adaptive" / f"{args.tag}_train_adaptation"
         )
 
+    if args.output_name:
+        output_dir = data_dir / "adaptive" / args.output_name
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # ---------- Load the original data and saved detector ----------
@@ -257,6 +276,9 @@ def main():
         data_dir / "models"
         / f"{args.detector}_{args.tag}_{args.variant}.joblib"
     )
+
+    if args.model_path:
+        model_path = Path(args.model_path)
 
     required = [
         claims_path, detail_path, features_path, labels_path,
@@ -361,7 +383,7 @@ def main():
     window_start = pd.Timestamp(params["window_start"])
     window_end = pd.Timestamp(params["window_end"])
 
-    rng = np.random.default_rng(int(params.get("seed", 42)) + 901)
+    rng = np.random.default_rng(int(params.get("seed", 42)) + args.seed_offset)
     candidates = []
     candidate_counts = {}
 
@@ -404,11 +426,18 @@ def main():
                     1.01, float(upcoding_cfg["subtle_ratio"][0])
                 )
 
-            proposed_ratios = sorted({
-                round(minimum_ratio, 4),
-                round(max(minimum_ratio, current_ratio * 0.95), 4),
-                round(max(minimum_ratio, current_ratio * 0.85), 4),
-            })
+            if args.ratio_mode == "sampled":
+                upper = max(minimum_ratio, current_ratio * 0.95)
+                proposed_ratios = sorted({
+                    round(float(r), 4)
+                    for r in rng.uniform(minimum_ratio, upper, size=args.ratio_queries)
+                })
+            else:
+                proposed_ratios = sorted({
+                    round(minimum_ratio, 4),
+                    round(max(minimum_ratio, current_ratio * 0.95), 4),
+                    round(max(minimum_ratio, current_ratio * 0.85), 4),
+                })
 
             for ratio in proposed_ratios:
                 if ratio >= current_ratio - 1e-5:

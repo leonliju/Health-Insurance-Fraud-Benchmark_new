@@ -1,4 +1,14 @@
-pandas>=2.0
-numpy>=1.24
-# optional, only for src/extract_hbp.py:
-# pdfplumber
+# Core pipeline (generation, features, detectors, adaptive experiments)
+numpy
+pandas
+scikit-learn
+xgboost
+joblib
+matplotlib
+
+# Optional
+pdfplumber      # only for src/extract_hbp.py (rebuilding the HBP 2.2 table from the official PDF)
+# streamlit     # dashboard (Module 4, not built yet)
+# plotly        # dashboard charts
+# shap          # feature-importance analysis
+# mlflow        # experiment tracking
